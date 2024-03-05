@@ -53,6 +53,17 @@ public class WalletTugas {
         return money;
     }
 
+    public void resetMoney(){
+        this.coins = new HashMap<Integer, Integer>();
+        for (int i = 0; i < coinTypes.length; i++) {
+            this.coins.put(coinTypes[i], 0);
+        }
+
+        this.money = new HashMap<Integer, Integer>();
+        for (int i = 0; i < moneyTypes.length; i++) {
+            this.money.put(moneyTypes[i], 0);
+        }
+    }
     public void addMoney(Integer moneyType) {
         boolean isMoneyValid = false;
 
@@ -117,4 +128,6 @@ public class WalletTugas {
         }
         return total;
     }
+
+
 }
